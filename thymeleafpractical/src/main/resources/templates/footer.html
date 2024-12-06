@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Footer Template</title>
+</head>
+<body>
+	<!-- <footer id = "fragmentTag" th:fragment = "footer1">
+		<div class="container">
+			<h1>This is footer page</h1>
+			<h1>SpringBoot application page</h1>			
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+				aliquid molestias necessitatibus est minima quaerat tempora eos
+				optio vitae mollitia iusto sit obcaecati id cum voluptates rerum
+				ducimus. Nostrum quidem autem ex facilis consequatur eveniet
+				obcaecati doloribus explicabo doloremque magni nulla unde eaque
+				ducimus officiis recusandae aliquam harum esse expedita.</p>
+
+		</div>
+	</footer> -->
+	
+	<!-- Passing dynamic values -->
+	<!-- Same code work with controller dynamic values -->
+	<footer id = "fragmentTag" th:fragment = "footer1(title,subtitle)">
+		<div class="container">
+			<h1>This is footer page</h1>
+			<h1>SpringBoot application page</h1>
+			
+			<h2 th:text = "${title}"></h2>
+			<h2 th:text = "${subtitle}"></h2>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+				aliquid molestias necessitatibus est minima quaerat tempora eos
+				optio vitae mollitia iusto sit obcaecati id cum voluptates rerum
+				ducimus. Nostrum quidem autem ex facilis consequatur eveniet
+				obcaecati doloribus explicabo doloremque magni nulla unde eaque
+				ducimus officiis recusandae aliquam harum esse expedita.</p>
+
+		</div>
+	</footer>
+	
+</body>
+</html>

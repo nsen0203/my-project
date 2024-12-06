@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Services Page</title>
+</head>
+<body>
+	<h1>These are services which are present in application</h1>
+
+	<!-- Using Footer here -->
+
+	<!-- using replace fragment -->
+	<!-- <footer id="hostTag" th:replace="footer::footer1"> </footer> -->
+
+	<!-- using insert fragment -->
+	<!-- <footer id = "hostTag" th:insert = "footer::footer1">
+	</footer> -->
+
+	<!-- using include fragment -->
+	<!-- <footer id = "hostTag" th:include = "footer::footer1">
+	</footer> -->
+	
+	
+	<!-- Passing dynamic value -->
+	
+	<!-- <footer id="hostTag" th:replace="footer::footer1('This is title','This is subtitle')"> </footer> -->
+	
+	
+	<!-- Passing dynamic values with controller -->
+	<footer id="hostTag" th:replace="footer::footer1(${title}, ${subtitle})"> </footer>
+
+</body>
+</html>

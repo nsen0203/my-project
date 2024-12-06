@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Iterate Example</title>
+</head>
+<body>
+	<h1>Going to traverse element in Collection</h1>
+
+
+	<h1 th:text="${names}"></h1>
+
+	<!-- Iterating collection  -->
+	<ul>
+		<!-- <li th:each="n : ${names}">
+			<h1 th:text="${n}"></h1>
+		</li> -->
+		
+		<!-- <li th:each="n,status : ${names}">
+			<h1 th:text="${status.index+1}+' '+${n}"></h1>
+		</li> -->
+		
+		<li th:each="n,status : ${names}">
+			<!-- <h1 th:style="${status.odd} ? 'font-style:italic' : '' " th:text="${status.index+1}+' '+${n}"></h1> -->
+			<h1 th:style="${status.odd} ? 'color:red;font-style:italic' : '' " th:text="${status.index+1}+' '+${n}"></h1>
+		</li>
+		
+	</ul>
+
+</body>
+</html>

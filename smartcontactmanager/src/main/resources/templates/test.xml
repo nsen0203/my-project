@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<AWDRIP>
+	<Transaction>
+		<field name="POLN" value="0099145207" />
+		<field name="SUFX" value="" />
+		<field name="CLTY" value="ANNVDREIS" />
+		<field name="RCVD" value="03-02-2023" />
+		<field name="INSF" value="ELIANA" />
+		<field name="INSL" value="DICRUZ" />
+		<field name="GPNU" value="" />
+		<field name="SNUM" value="919705239" />
+		<field name="DEPI" value="1234567" />
+		<field name="UNIT" value="METLIFE" />
+		<field name="WRKT" value="INTAKE" />
+		<field name="STAT" value="CREATED" />
+		<field name="WIPO" value="MISDIRECT" />
+		<source>
+			<field name="UNIT" value="METLIFE" />
+			<field name="OBJT" value="CORRESP" />
+			<path
+				name="C:\AWDExtServices\mergeimages\e5a8d197-c44c-4768-9e90-4af63bcf2803-0099145207_3.docx" />
+		</source>
+		<source>
+			<field name="UNIT" value="METLIFE" />
+			<field name="OBJT" value="CORRESP" />
+			<path
+				name="C:\AWDExtServices\mergeimages\e5a8d197-c44c-4768-9e90-4af63bcf2803-0099145207_2.pdf" />
+		</source>
+		<source>
+			<field name="UNIT" value="METLIFE" />
+			<field name="OBJT" value="DTHCERT" />
+			<path
+				name="C:\AWDExtServices\mergeimages\e5a8d197-c44c-4768-9e90-4af63bcf2803-0099145207_1.xlsx" />
+		</source>
+	</Transaction>
+</AWDRIP>
