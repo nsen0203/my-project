@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- standalone list -->
+
+	<util:list list-class="java.util.LinkedList" id="u1">
+		<value>Abc</value>
+		<value>Def</value>
+		<value>ghi</value>
+	</util:list>
+
+	<!-- standalone map -->
+	<util:map map-class="java.util.TreeMap" id="u2">
+		<entry key="Spring framework" value="1000" />
+		<entry key="Hibernate" value="500" />
+		<entry key="Python" value="800" />
+	</util:map>
+
+	<!-- standalone properties -->
+	<util:properties id="u3">
+		<prop key="First Name">Nikhil</prop>
+		<prop key="Second Name">Sen</prop>
+	</util:properties>
+
+	<bean class="com.springcore.standalone.collection.Employee"
+		name="emp">
+		<!-- <property name="friends"> <ref bean="u1" /> </property> -->
+		<property name="friends" ref="u1" />
+		<property name="feeStructure" ref="u2" />
+		<property name="properties" ref="u3" />
+
+	</bean>
+
+</beans>

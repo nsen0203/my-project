@@ -1,11 +1,15 @@
-package com.spring.jdbc.dao;
+package com.spring.jdbc.Dao;
 
-import com.spring.jdbc.entities.Student;
+import java.util.List;
+
+import com.spring.jdbc.Entity.Student;
 
 public interface StudentDao {
 	
 	public int insert(Student student);
 	public int update(Student student);
 	public int delete(int studentId);
+	public Student select(int studentId);
+	public List<Student> selectAll();
 
 }
