@@ -1,0 +1,115 @@
+// Creating thread without extending thread or without implmenting runnable interface
+
+1.
+import java.util.concurrent.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a fixed thread pool executor
+        ExecutorService executorService = Executors.newFixedThreadPool(1);
+
+        // Submit a task to the executor (no need to extend Thread or implement Runnable)
+        executorService.submit(() -> {
+            System.out.println("This is running in a separate thread!");
+        });
+
+        // Shut down the executor after use
+        executorService.shutdown();
+    }
+}
+
+2.
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a new thread using a lambda expression
+        Thread thread = new Thread(() -> {
+            System.out.println("This is running in a separate thread!");
+        });
+        thread.start();
+    }
+}
+
+========================================================================================
+
+what is newFixedThreadPool(1)?
+
+import java.util.concurrent.*;
+
+public class ThreadPoolExample {
+    public static void main(String[] args) {
+        // Create a thread pool with 3 threads
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
+
+        // Submit tasks to the pool
+        for (int i = 0; i < 5; i++) {
+            executorService.submit(() -> {
+                System.out.println(Thread.currentThread().getName() + " is working.");
+            });
+        }
+
+        // Shut down the executor service
+        executorService.shutdown();
+    }
+}
+
+In this example:
+
+    We created a thread pool with 3 threads.
+    Five tasks are submitted to the pool, but only three tasks can run at a time. The remaining tasks will wait in the queue until a thread becomes available.
+	
+
+======================================================================================
+
+Update the salary using java8 stream api using map and foreach
+
+import java.util.*;
+import java.util.stream.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // List of employees
+        List<Employee> employees = Arrays.asList(
+            new Employee("Alice", 16000),
+            new Employee("Bob", 12000),
+            new Employee("Charlie", 18000),
+            new Employee("David", 14000)
+        );
+
+        // Update salary of employees with salary > 15,000 by 1,000
+        employees.stream()
+                 .filter(e -> e.getSalary() > 15000)  // Filter employees with salary > 15,000
+                 .forEach(e -> e.setSalary(e.getSalary() + 1000));  // Update salary by 1000
+
+        // Print the updated list of employees
+        employees.forEach(System.out::println);
+    }
+}
+
+
+import java.util.*;
+import java.util.stream.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // List of employees
+        List<Employee> employees = Arrays.asList(
+            new Employee("Alice", 16000),
+            new Employee("Bob", 12000),
+            new Employee("Charlie", 18000),
+            new Employee("David", 14000)
+        );
+
+        // Use filter() to select employees with salary > 15000 and map() to update their salary
+        List<Employee> updatedEmployees = employees.stream()
+            .filter(e -> e.getSalary() > 15000) // Filter employees with salary > 15000
+            .map(e -> {
+                e.setSalary(e.getSalary() + 1000); // Update salary by 1000
+                return e; // Return the updated employee
+            })
+            .collect(Collectors.toList()); // Collect the results into a new list
+
+        // Print the updated list of employees
+        updatedEmployees.forEach(System.out::println);
+    }
+}

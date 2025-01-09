@@ -14,6 +14,7 @@ public class StringPalindrome {
 		}
 		System.out.println("Its a palindrome");
 
+		
 	}
 
 }

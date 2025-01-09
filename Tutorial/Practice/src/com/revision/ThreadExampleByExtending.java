@@ -4,9 +4,9 @@ import java.util.concurrent.*;
 
 public class ThreadExampleByExtending extends Thread{
 	
-	public void run() {
-		System.out.println("Inside run method");
-	}
+//	public void run() {
+//		System.out.println("Inside run method");
+//	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

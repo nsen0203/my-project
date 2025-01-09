@@ -1,0 +1,6 @@
+https://mkyong.com/tutorials/java-8-tutorials/
+https://blog.devgenius.io/java-8-coding-and-programming-interview-questions-and-answers-62512c44f062
+https://www.javaguides.net/2024/02/java-8-program-to-find-second-largest-number-in-list-of-integers.html
+
+[NEW] Master Microservices with SpringBoot,Docker,Kubernetes
+Master Microservices with Spring Boot and Spring Cloud
