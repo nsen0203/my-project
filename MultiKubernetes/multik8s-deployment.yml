@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multik8s-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: multik8s
+  template:
+    metadata:
+      labels:
+        app: multik8s
+    spec:
+      containers:
+        - name: multik8s-container
+          image: nikhil1208/multik8s:1.0
+          ports:
+          - containerPort: 8080
+          volumeMounts:
+          - name: file-storage
+            mountPath: /tmp/uploads
+      volumes:
+      - name: file-storage
+        emptyDir: {}
