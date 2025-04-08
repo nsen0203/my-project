@@ -25,10 +25,10 @@ public class ListToMapToList {
 		List<String> list = Arrays.asList("One", "Second", "third");
 		
 		Map<Integer, String> collect = IntStream.range(0, list.size()).boxed().collect(Collectors.toMap(i -> i, list::get));
-		System.out.println(collect);
+		System.out.println(collect);//{0=One, 1=Second, 2=third}
 		
 		Map<String, Integer> collect2 = list.stream().collect(Collectors.toMap(i->i, String::length));
-		System.out.println(collect2);
+		System.out.println(collect2); //{Second=6, third=5, One=3}
 		
 	}
 

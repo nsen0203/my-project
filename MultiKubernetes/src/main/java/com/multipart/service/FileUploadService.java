@@ -18,10 +18,10 @@ public class FileUploadService {
 			throw new FileNotFoundException("File not found");
 		}
 		
-		File upload = new File(FileConstant.filePath);
-		if(!upload.exists()) {
-			upload.mkdirs();
-		}
+//		File upload = new File(FileConstant.filePath);
+//		if(!upload.exists()) {
+//			upload.mkdirs();
+//		}
 		
 		File dest = new File(FileConstant.filePath + file.getOriginalFilename());
 		file.transferTo(dest);

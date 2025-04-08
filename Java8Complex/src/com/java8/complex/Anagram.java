@@ -9,8 +9,8 @@ public class Anagram {
 		String s1="RaceCar";
 		String s2="CarRace";
 		
-		List<String> st=Stream.of(s1.split("")).map(String::toUppercase).sorted().collect(Collectors.toList());
-		List<String> st1=Stream.of(s2.split("")).map(String::toUppercase).sorted().collect(Collectors.toList());
+		List<String> st=Stream.of(s1.split("")).map(String::toUpperCase).sorted().collect(Collectors.toList());
+		List<String> st1=Stream.of(s2.split("")).map(String::toUpperCase).sorted().collect(Collectors.toList());
 		
 		if(st.equals(st1)) {
 			System.out.println("Anagram");
