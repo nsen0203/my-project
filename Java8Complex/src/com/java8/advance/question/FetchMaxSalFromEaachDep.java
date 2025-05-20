@@ -2,6 +2,7 @@ package com.java8.advance.question;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.Map.*;
 
 public class FetchMaxSalFromEaachDep {
 	
@@ -28,7 +29,12 @@ public class FetchMaxSalFromEaachDep {
 		emplist.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
 		
 		Map<String, Optional<Employee>> collect = emplist.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.maxBy((e1,e2) -> Double.compare(e1.getSalary(), e2.getSalary()))));
+		Set<Entry<String, Optional<Employee>>> entrySet=collect.entrySet();
 		
+		for(Entry<String, Optional<Employee>> entry: entrySet) {
+			System.out.println(entry.getKey());
+			System.out.println(entry.getValue());
+		}
 		
 		// Find the sum of salaries for each city
 //        Map<String, Double> salarySumByCity = employees.stream()

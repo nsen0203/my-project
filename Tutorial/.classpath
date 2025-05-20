@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="blog-app-api/src/main/java"/>
+	<classpathentry kind="src" path="blog-app-api/src/test/java"/>
+	<classpathentry kind="src" path="contact_service/src/main/java"/>
+	<classpathentry kind="src" path="contact_service/src/test/java"/>
+	<classpathentry kind="src" path="Practice/src"/>
+	<classpathentry kind="src" path="Practice/Test/src"/>
+	<classpathentry kind="src" path="Practice1/e_server/src/main/java"/>
+	<classpathentry kind="src" path="Practice1/e_server/src/test/java"/>
+	<classpathentry kind="src" path="Practice1/Test/src"/>
+	<classpathentry kind="src" path="Practice-16-05/Practice-16-05-wrk/src"/>
+	<classpathentry kind="output" path="Practice/Test/bin"/>
+</classpath>
